@@ -10,7 +10,6 @@ const GeneralApp = () => {
     <Stack direction={"row"} sx={{ width: "100%" }}>
       {/* Chats */}
       <Chats />
-
       <Box
         sx={{
           height: "100%",
