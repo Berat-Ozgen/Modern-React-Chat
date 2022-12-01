@@ -1,7 +1,7 @@
 import { Stack, Box } from "@mui/material";
 import React from "react";
 import { Chat_History } from "../../data";
-import { MediaMsg, TextMsg, Timeline } from "./MsgTypes";
+import { MediaMsg, ReplyMsg, TextMsg, Timeline } from "./MsgTypes";
 
 const Message = () => {
   console.log(Chat_History);
@@ -27,7 +27,7 @@ const Message = () => {
                   break;
                 case "reply":
                   // reply msg
-                  break;
+                  return <ReplyMsg el={el} />;
 
                 default:
                   // text msg
