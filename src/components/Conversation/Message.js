@@ -1,8 +1,10 @@
 import { Stack, Box } from "@mui/material";
 import React from "react";
 import { Chat_History } from "../../data";
+import { TextMsg, Timeline } from "./MsgTypes";
 
 const Message = () => {
+  console.log(Chat_History);
   return (
     <Box p={3}>
       <Stack spacing={3}>
@@ -10,7 +12,7 @@ const Message = () => {
           switch (el.type) {
             case "divider":
               // TimeLine
-              break;
+              return <Timeline el={el} />;
 
             case "msg":
               switch (el.subtype) {
@@ -29,7 +31,7 @@ const Message = () => {
 
                 default:
                   // text msg
-                  break;
+                  return <TextMsg el={el} />;
               }
               break;
 
